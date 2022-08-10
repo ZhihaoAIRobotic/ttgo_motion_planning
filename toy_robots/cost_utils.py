@@ -129,6 +129,8 @@ class PlanarManipulatorCost:
 
         c_total = self.w_goal*d_goal/self.b_goal+self.w_obst*d_obst/self.b_obst
         c_return = torch.cat((c_total.view(-1,1), d_goal.view(-1,1), d_obst.view(-1,1)),dim=1)
+        print(c_total)
+        print(c_return)
         return c_return
 
 
